@@ -1,0 +1,46 @@
+body {
+    background-color: lightblue; /* Using a soft blue */
+    font-family: Arial, sans-serif; /* Added a clean font */
+    margin: 0; /* Removes default body margin */
+    padding: 20px;
+}
+
+/* 1. placing the form name at the top center */
+h1 {
+    text-align: center;
+}
+/*  2. styling the form borders and background color */
+#registrationForm {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* 2. Styling and Centering the Form */
+#registrationForm {
+    background-color: white; /* White background for the form box */
+    padding: 30px;
+                border-radius: 10px; /* Rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+                
+                /* Centering the form block */
+                width: 80%; /* Set a reasonable width */
+                max-width: 600px; /* Keep it from getting too wide on large screens */
+                margin-left: auto; /* Center horizontally */
+                margin-right: auto; /* Center horizontally */
+            }
+            
+            /* Simple styling for error messages */
+            .error {
+                color: red;
+                font-weight: bold;
+            }
+
+            /* Improve input spacing slightly */
+            input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"] {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                box-sizing: border-box; /* Ensures padding doesn't increase the total width */
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }

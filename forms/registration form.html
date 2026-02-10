@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> FORM</title>
+    </head>
+    <BODY>
+        <link rel="stylesheet" href="style.css">   
+        <h1><b>REGISTRATION FORM</b></h1>
+        <form id="registrationForm" action="#" method="post">
+            NAME:<INPUT type="text"id="username"placeholder="Enter your name"><BR><br>
+                email:<input type="email" id="email" placeholder="Enter your email"><br><br>
+                password:<input type="password" id="password" placeholder="Enter your password"><br><br>
+                age:<input type="number" id="age" placeholder="Enter your age"><br><br>
+                <div id="ageError" style="color: red;"></div>
+                birthday:<input type="date" id="birthday"><br><br>
+                <input type="file" id="file"><br><br>
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to the terms and conditions</label><br><br>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> Other
+                    <input type ="submit" value="submit">
+        <script>
+            // Get a reference to the form element
+            const form = document.getElementById('registrationForm');
+            const ageInput = document.getElementById('age');
+            const ageErrorDiv = document.getElementById('ageError');
+
+            // Only attach the listener if all required elements exist
+            if (form && ageInput && ageErrorDiv) {
+                // Add an event listener that waits for the form submission attempt
+                form.addEventListener('submit', function(event) {
+                    // Get the value entered for age and convert it to a number
+                    const ageValue = parseInt(ageInput.value, 10);
+
+                    // Check: Is it a number and is it less than or equal to 0?
+                    if (isNaN(ageValue) || ageValue <= 0) {
+                        // Show error message and stop the form from submitting
+                        ageErrorDiv.textContent = "Error: Age must be a positive number greater than 0.";
+                        event.preventDefault();
+                    } else {
+                        // Clear any previous error message
+                        ageErrorDiv.textContent = "";
+                        // The form submission will continue normally
+                        console.log("Age is valid. Proceeding with form submission.");
+                    }
+                });
+            }
+        </script>
+        </script>
+    </BODY>
+</html>
